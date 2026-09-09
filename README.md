@@ -29,7 +29,7 @@ The primary aim of this research is to propose an intelligent SQL Injection dete
 ## 2. Research Methodology and Engineering Framework
 ### 2.1 Layer 1: Research Methodology
 * **Selected Methodology:** Design Science Research Methodology (DSRM)
-* **Justification:** DSRM is selected because the core contribution of this project is the construction and evaluation of a novel technical artifact—specifically, an ensemble machine learning detection pipeline—designed to solve a concrete web vulnerability challenge [0.1.5, 0.1.72, source: 2].
+* **Justification:** DSRM is selected because the core contribution of this project is the construction and evaluation of a novel technical artifact. Specifically, an ensemble machine learning detection pipeline—designed to solve a concrete web vulnerability challenge [0.1.5, 0.1.72, source: 2].
 
 ### 2.2 Layer 2: Development Model
 * **Selected Model:** Prototyping Model
