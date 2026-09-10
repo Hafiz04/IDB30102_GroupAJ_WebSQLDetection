@@ -41,7 +41,8 @@ The primary aim of this research is to propose an intelligent SQL Injection dete
 Below is the structural engineering layout of the proposed web SQLi detection pipeline.
 
 ### 3.1 Proposed System Architecture
-![System Architecture](./03_Architecture_and_Flowchart/system_architecture.png)
+<img width="626" height="787" alt="research01" src="https://github.com/user-attachments/assets/847145af-4071-4c9b-a733-eaa873c99eed" />
+
 
 ### 3.2 System Flowchart
 ![System Flowchart](./03_Architecture_and_Flowchart/system_flowchart.png)
