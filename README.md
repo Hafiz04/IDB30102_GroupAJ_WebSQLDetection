@@ -45,7 +45,7 @@ Below is the structural engineering layout of the proposed web SQLi detection pi
 
 
 ### 3.2 System Flowchart
-![System Flowchart](./03_Architecture_and_Flowchart/system_flowchart.png)
+<img width="620" height="780" alt="image" src="https://github.com/user-attachments/assets/0a5ad1d0-c655-41b3-9492-b15a0a841b34" />
 
 ---
 
