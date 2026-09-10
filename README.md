@@ -17,7 +17,7 @@
 | Student Name | Student ID | Primary Technical Contribution |
 | :--- | :--- | :--- |
 | Adam Izzuddin Bin Rashidi | 52215125114 | Chapter 3 (Part A): Methodology Framework Selection, SDLC Model Customization, Architecture Diagram Blueprinting, System Flowchart Engineering, and Repository Structure Mapping. |
-| Muhammad Hafiz Hakimi Bin Mazuki | 52215125763 | Chapter 2: Systematic Literature Review Synthesis, Thematic Identification Matrices, Critical Summary Table Formulation, and Research Gap Isolation. |
+| Muhammad Hafiz Hakimi Bin Mazuki | 52215125763 |  |
 | Ahmad Fahmie Bin Mohd Khairy | 52215125925 |  |
 | Haziq Fahmi Bin Abd Aziz | 52215125155 | |
 | Afiq Naqiuddin Bin Shafie | 52215125765 |  |
