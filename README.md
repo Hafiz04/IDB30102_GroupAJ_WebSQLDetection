@@ -18,9 +18,9 @@
 | :--- | :--- | :--- |
 | Adam Izzuddin Bin Rashidi | 52215125114 | Chapter 3 (Part A): Methodology Framework Selection, SDLC Model Customization, Architecture Diagram Blueprinting, System Flowchart Engineering, and Repository Structure Mapping. |
 | Muhammad Hafiz Hakimi Bin Mazuki | 52215125763 | Chapter 2: Systematic Literature Review Synthesis, Thematic Identification Matrices, Critical Summary Table Formulation, and Research Gap Isolation. |
-| Ahmad Fahmie Bin Mohd Khairy | 52215125925 | Chapter 1: Cybersecurity Introduction, Background of Study Contextualization, Problem Statements Isolation, Project Scope Boundaries, and Overall Document Integration. |
-| Haziq Fahmi Bin Abd Aziz | 52215125155 | Chapter 3 (Part B): Data Collection Protocols, Hardware/Software Bed Constraints, Evaluation Metrics Execution, and Project Timeline/Gantt Chart Formulation. |
-| Afiq Naqiuddin Bin Shafie | 52215125765 | Review and Quality Control: Content Consistency Verification, Payload Obfuscation Mapping, APA 7th Edition Reference Cross-Checking, and Git Log Compliance Management. |
+| Ahmad Fahmie Bin Mohd Khairy | 52215125925 |  |
+| Haziq Fahmi Bin Abd Aziz | 52215125155 | |
+| Afiq Naqiuddin Bin Shafie | 52215125765 |  |
 
 ---
 
