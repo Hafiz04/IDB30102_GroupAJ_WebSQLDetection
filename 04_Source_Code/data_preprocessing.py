@@ -1,10 +1,18 @@
 """
-SQL Injection Detection
+SQL Injection Detection using Ensemble Learning
+
 Data Preprocessing Module
 
 Purpose:
-Clean and prepare SQL query dataset
-for machine learning model training.
+This script prepares SQL query dataset before
+machine learning model training.
+
+Processing steps:
+1. Load SQL injection dataset
+2. Clean SQL query text
+3. Remove unnecessary symbols
+4. Convert text into standard format
+5. Save processed dataset
 """
 
 
@@ -12,55 +20,148 @@ import pandas as pd
 import re
 
 
+
+# =====================================
+# Function: Clean SQL Query
+# =====================================
+
 def clean_sql_query(query):
+
     """
-    Remove unnecessary symbols
-    and convert SQL query into lowercase
+    Clean SQL query input by:
+    - converting text to lowercase
+    - removing unnecessary symbols
+    - removing extra spaces
     """
 
-    query = str(query).lower()
-
-    # remove special characters
-    query = re.sub(r'[^a-z0-9\s]', '', query)
-
-    return query
+    # Convert input into string
+    query = str(query)
 
 
+    # Convert to lowercase
+    query = query.lower()
+
+
+    # Remove special characters
+    query = re.sub(
+        r'[^a-z0-9\s]',
+        '',
+        query
+    )
+
+
+    # Remove extra spaces
+    query = re.sub(
+        r'\s+',
+        ' ',
+        query
+    )
+
+
+    return query.strip()
+
+
+
+
+# =====================================
+# Function: Load Dataset
+# =====================================
 
 def load_dataset(file_path):
 
+    """
+    Load SQL injection dataset from CSV file.
+    """
+
     data = pd.read_csv(file_path)
 
-    print("Dataset loaded successfully")
+
+    print("Dataset Loaded Successfully")
+    print("----------------------------")
+
     print(data.head())
 
-    return data
-
-
-
-def preprocess_data(data):
-
-    # Apply cleaning on SQL query column
-    data["clean_query"] = data["query"].apply(clean_sql_query)
 
     return data
 
 
+
+
+
+# =====================================
+# Function: Preprocess Dataset
+# =====================================
+
+def preprocess_dataset(data):
+
+    """
+    Apply text cleaning on SQL query column.
+    """
+
+
+    # Create new cleaned query column
+
+    data["clean_query"] = data["query"].apply(
+        clean_sql_query
+    )
+
+
+    return data
+
+
+
+
+
+# =====================================
+# Main Program
+# =====================================
 
 if __name__ == "__main__":
 
-    dataset_path = "../05_Data_or_Sample_Input/sql_injection_dataset.csv"
 
-    dataset = load_dataset(dataset_path)
+    # Dataset location
 
-    processed_data = preprocess_data(dataset)
+    dataset_path = (
+        "../05_Data_or_Sample_Input/"
+        "sql_injection_dataset.csv"
+    )
 
-    print("\nProcessed Dataset:")
-    print(processed_data.head())
 
-    processed_data.to_csv(
+
+    # Load dataset
+
+    dataset = load_dataset(
+        dataset_path
+    )
+
+
+
+    # Data preprocessing
+
+    processed_dataset = preprocess_dataset(
+        dataset
+    )
+
+
+
+    print("\nProcessed Dataset")
+    print("-----------------")
+
+    print(
+        processed_dataset.head()
+    )
+
+
+
+    # Save processed dataset
+
+    processed_dataset.to_csv(
         "processed_sql_dataset.csv",
         index=False
     )
 
-    print("\nPreprocessing completed!")
+
+
+    print(
+        "\nData preprocessing completed successfully!"
+    )
