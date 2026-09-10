@@ -1,25 +1,32 @@
 """
 SQL Injection Attack Detection
-Using Ensemble Learning Approach
+
+Ensemble Learning Approach
 
 Algorithms:
 - Random Forest
-- Gradient Boosting
+- XGBoost
 - Voting Classifier
+
+Feature Extraction:
+- TF-IDF Vectorization
 """
 
 
 import pandas as pd
 
+
 from sklearn.model_selection import train_test_split
+
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from sklearn.ensemble import (
-    RandomForestClassifier,
-    GradientBoostingClassifier,
-    VotingClassifier
-)
+
+from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+
+
+from xgboost import XGBClassifier
+
 
 from sklearn.metrics import (
     accuracy_score,
@@ -31,9 +38,9 @@ from sklearn.metrics import (
 
 
 
-# ==========================
+# ==============================
 # Load Dataset
-# ==========================
+# ==============================
 
 
 dataset = pd.read_csv(
@@ -41,16 +48,21 @@ dataset = pd.read_csv(
 )
 
 
+print("Dataset Loaded")
 print(dataset.head())
 
 
-# ==========================
+
+# ==============================
 # Feature Extraction
-# Convert SQL text into numerical features
-# ==========================
+# Convert SQL Query into numerical vector
+# ==============================
 
 
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(
+    lowercase=True
+)
+
 
 X = vectorizer.fit_transform(
     dataset["query"]
@@ -61,9 +73,9 @@ y = dataset["label"]
 
 
 
-# ==========================
-# Split Training and Testing Data
-# ==========================
+# ==============================
+# Split Dataset
+# ==============================
 
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -75,9 +87,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 
-# ==========================
-# Individual Machine Learning Models
-# ==========================
+# ==============================
+# Machine Learning Models
+# ==============================
 
 
 random_forest = RandomForestClassifier(
@@ -87,36 +99,44 @@ random_forest = RandomForestClassifier(
 
 
 
-gradient_boosting = GradientBoostingClassifier()
-
-
-
-# ==========================
-# Ensemble Learning Model
-# ==========================
-
-
-ensemble_model = VotingClassifier(
-    estimators=[
-        (
-            "random_forest",
-            random_forest
-        ),
-
-        (
-            "gradient_boosting",
-            gradient_boosting
-        )
-    ],
-
-    voting="soft"
+xgboost_model = XGBClassifier(
+    n_estimators=100,
+    random_state=42,
+    eval_metric="logloss"
 )
 
 
 
-# ==========================
-# Training Model
-# ==========================
+# ==============================
+# Ensemble Learning Model
+# ==============================
+
+
+ensemble_model = VotingClassifier(
+
+    estimators=[
+
+        (
+            "Random Forest",
+            random_forest
+        ),
+
+        (
+            "XGBoost",
+            xgboost_model
+        )
+
+    ],
+
+    voting="soft"
+
+)
+
+
+
+# ==============================
+# Training
+# ==============================
 
 
 ensemble_model.fit(
@@ -126,14 +146,14 @@ ensemble_model.fit(
 
 
 print(
-    "Model training completed!"
+    "\nEnsemble Model Training Completed"
 )
 
 
 
-# ==========================
+# ==============================
 # Prediction
-# ==========================
+# ==============================
 
 
 prediction = ensemble_model.predict(
@@ -142,9 +162,9 @@ prediction = ensemble_model.predict(
 
 
 
-# ==========================
-# Evaluation
-# ==========================
+# ==============================
+# Performance Evaluation
+# ==============================
 
 
 accuracy = accuracy_score(
@@ -175,24 +195,26 @@ f1 = f1_score(
 
 
 
-print("\nEvaluation Result")
-
-print("----------------")
+print("\nModel Evaluation Result")
+print("======================")
 
 print(
     "Accuracy:",
     accuracy
 )
 
+
 print(
     "Precision:",
     precision
 )
 
+
 print(
     "Recall:",
     recall
 )
+
 
 print(
     "F1 Score:",
@@ -201,9 +223,7 @@ print(
 
 
 
-print(
-    "\nDetailed Report:"
-)
+print("\nClassification Report")
 
 print(
     classification_report(
