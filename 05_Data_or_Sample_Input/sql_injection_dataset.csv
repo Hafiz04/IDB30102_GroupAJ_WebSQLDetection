@@ -1,0 +1,16 @@
+query,label
+SELECT username,password FROM users,0
+SELECT id,name FROM products WHERE id=10,0
+SELECT * FROM customer WHERE username='john',0
+INSERT INTO users VALUES('admin','12345'),0
+UPDATE profile SET name='Ali' WHERE id=5,0
+normal search request,0
+SELECT email FROM account WHERE id=20,0
+' OR '1'='1,1
+admin' --,1
+' OR 1=1 --,1
+' UNION SELECT username,password FROM users --,1
+1 OR 1=1,1
+' DROP TABLE users --,1
+admin' OR 'x'='x,1
+" OR ""="",1
