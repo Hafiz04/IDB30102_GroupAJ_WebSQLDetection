@@ -23,7 +23,6 @@
 
 # Project Matrix and Contribution Map
 
-# Project Matrix and Contribution Map
 
 | Student Name | Student ID | Primary Technical Contribution |
 | :--- | :--- | :--- |
