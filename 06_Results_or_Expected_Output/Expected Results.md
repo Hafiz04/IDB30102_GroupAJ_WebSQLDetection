@@ -1,87 +1,92 @@
-Expected Results / Expected Output
+# Expected Results / Expected Output
 
-This research is expected to develop a more effective SQL Injection (SQLi) detection system by using an ensemble machine learning approach that combines Random Forest and XGBoost with a structural preprocessing module. The proposed approach aims to improve detection accuracy while maintaining faster processing performance compared with complex deep learning models.
+## Research Title
 
-1. Improved SQL Injection Detection Performance
+Detecting SQL Injection Attacks in Web Environments Using an Ensemble Learning Approach
 
-The proposed model is expected to achieve better detection performance compared with individual machine learning algorithms. By combining multiple classifiers, the model can analyse different characteristics of SQL queries and make more accurate decisions.
 
-The expected performance of the proposed model is:
+## Expected System Outcome
 
-Evaluation Metric	Expected Result
-Accuracy	Above 95%
-Precision	High precision in identifying malicious queries
-Recall	High ability to detect actual SQL injection attacks
-F1-Score	Balanced performance between precision and recall
-False Positive Rate	Below 5%
+This research is expected to develop an SQL Injection detection prototype using an Ensemble Learning approach that combines Random Forest and XGBoost classifiers with SQL query preprocessing techniques.
 
-This improvement is expected because ensemble learning allows different models to work together, reducing the weaknesses of individual classifiers.
+The proposed system aims to improve SQL Injection detection capability by analysing SQL query patterns and classifying inputs into normal queries and malicious attack payloads.
 
-2. Improved Detection of Obfuscated SQL Injection Attacks
 
-One of the main challenges in SQL injection detection is handling obfuscated payloads, where attackers modify the structure of malicious queries to avoid detection. The proposed structural preprocessing module is expected to improve the ability of the system to recognize these modified attack patterns.
+# 1. Expected SQL Injection Detection Performance
 
-For example, attackers may use techniques such as:
+The proposed Ensemble Learning model is expected to provide effective detection performance by combining multiple machine learning classifiers.
 
-Adding comments inside SQL commands.
-Changing uppercase and lowercase characters.
-Using encoding methods.
-Modifying spaces and query structures.
+The performance of the model will be evaluated using:
 
-By normalizing and analysing these patterns before classification, the proposed system is expected to detect a wider range of SQL injection attacks compared with traditional approaches.
+| Evaluation Metric | Purpose |
+|---|---|
+| Accuracy | Measures overall classification performance |
+| Precision | Measures correctly identified SQL Injection attacks |
+| Recall | Measures ability to detect actual attacks |
+| F1-Score | Measures balance between precision and recall |
+| False Positive Rate | Measures incorrect attack detection |
 
-3. Reduction of False Positive Results
 
-The proposed system is also expected to reduce false positive detection, where legitimate user requests are incorrectly identified as attacks.
+# 2. Expected Detection of Obfuscated SQL Injection Attacks
 
-By combining Random Forest and XGBoost predictions, the system can make more reliable decisions before blocking a request. This can help prevent unnecessary blocking of normal users while maintaining strong protection against malicious activities.
+The proposed preprocessing module is expected to improve detection capability against modified SQL Injection payloads.
 
-The expected outcome is:
+The system will analyse different SQL query structures including:
 
-More accurate classification of normal and malicious queries.
-Improved reliability for real-world web application security.
-Reduced disruption to legitimate users.
-4. Better Balance Between Accuracy and Processing Speed
+- Modified query formats
+- Special characters
+- Different query patterns
+- Payload variations
 
-Although deep learning models such as CNN-LSTM can achieve very high accuracy, they usually require more computational resources and longer processing time. The proposed ensemble approach aims to provide a balance between detection performance and efficiency.
 
-The expected result is that the proposed model can achieve high detection accuracy while maintaining low processing latency, making it more suitable for real-time web application protection.
+# 3. Expected Reduction of False Positive Results
 
-The expected processing time is:
+The Ensemble Learning approach is expected to improve classification reliability by combining predictions from multiple classifiers.
 
-Less than 30 milliseconds per SQL query.
+The expected outcome includes:
 
-5. Development of a SQL Injection Detection Prototype
+- Better separation between normal and malicious queries.
+- Reduced incorrect attack classification.
+- Improved reliability for web security applications.
 
-The research is expected to produce a prototype system that can analyse incoming SQL queries and classify them as either normal or malicious.
 
-The system workflow will include:
+# 4. Expected System Workflow
 
-Receiving user input or HTTP request data.
-Performing structural preprocessing to normalize SQL queries.
-Extracting important features from the query.
-Applying Random Forest and XGBoost classifiers.
-Generating the final prediction result.
+The proposed prototype will follow these steps:
 
-Example output:
+1. Receive SQL query input.
+2. Perform data preprocessing.
+3. Extract features using TF-IDF.
+4. Apply Random Forest and XGBoost classifiers.
+5. Generate final classification result.
+
+
+Example:
 
 Input Query:
 
-username='admin' OR 1=1--
+' OR '1'='1
 
-System Result:
 
-Prediction: SQL Injection Attack Detected
-Confidence Level: 98%
-Action: Block Request
-6. Expected Research Contribution
+Expected Output:
 
-This research is expected to contribute to the field of web security by providing:
+Prediction:
+SQL Injection Attack Detected
 
-A more robust SQL injection detection approach that can handle obfuscated attacks.
-An ensemble machine learning framework that improves detection reliability.
-A lightweight alternative to computationally expensive deep learning approaches.
-A practical solution that can potentially be integrated into Web Application Firewall (WAF) systems.
-Overall Expected Outcome
+Classification:
+Malicious Query
 
-Overall, the proposed research is expected to demonstrate that an ensemble learning approach can provide effective SQL injection detection with high accuracy, lower computational requirements, and better resistance against evolving attack techniques.
+
+# 5. Expected Research Contribution
+
+This research is expected to contribute by:
+
+- Providing an Ensemble Learning approach for SQL Injection detection.
+- Improving automated detection of malicious SQL queries.
+- Demonstrating the application of machine learning techniques in web security.
+- Providing supporting research for future Web Application Firewall (WAF) improvements.
+
+
+# Overall Expected Outcome
+
+Overall, the proposed research is expected to demonstrate that Ensemble Learning can be applied as an effective approach for detecting SQL Injection attacks while maintaining suitable computational efficiency
