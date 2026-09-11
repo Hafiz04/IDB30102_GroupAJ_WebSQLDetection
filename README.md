@@ -23,13 +23,15 @@
 
 # Project Matrix and Contribution Map
 
+# Project Matrix and Contribution Map
+
 | Student Name | Student ID | Primary Technical Contribution |
 | :--- | :--- | :--- |
-| Adam Izzuddin Bin Rashidi | 52215125114 | Chapter 3 (Part A): Research Methodology Selection, System Architecture Design, Flowchart Development, and Repository Structure Planning |
-| Muhammad Hafiz Hakimi Bin Mazuki | 52215125763 | Chapter 1: Introduction, Research Background, Problem Statements, Research Aim, Objectives and Research Scope |
-| Ahmad Fahmie Bin Mohd Khairy | 52215125925 | Chapter 2: Literature Review, Previous Research Analysis, Research Gap Identification and Literature Summary |
-| Haziq Fahmi Bin Abd Aziz | 52215125155 | Source Code Development, Machine Learning Model Implementation and Technical Component Integration |
-| Afiq Naqiuddin Bin Shafie | 52215125765 | Chapter 3 (Part B): Dataset Preparation, Data Collection Procedures, Evaluation Metrics Design, Expected Output Documentation and GitHub Data Management |
+| Muhammad Hafiz Hakimi Bin Mazuki | 52215125763 | Chapter 1: Introduction, Research Background, Research Problem Statements, Research Aim, Research Objectives, and Research Scope Development |
+| Adam Izzuddin Bin Rashidi | 52215125114 | Chapter 3 (Part A): Research Methodology Selection, Design Science Research Methodology (DSRM) Application, System Architecture Design, Flowchart Development, and Repository Structure Planning |
+| Afiq Naqiuddin Bin Shafie | 52215125765 | Chapter 3 (Part B): Dataset Preparation, Data Collection Procedures, SQL Injection Sample Input Management (`05_Data_or_Sample_Input`), Evaluation Metrics Design, and GitHub Data Management |
+| Ahmad Fahmie Bin Mohd Khairy | 52215125925 | Expected Output Documentation, Preliminary Result Analysis, Performance Output Organisation, and Results Management (`06_Results_or_Expected_Output`) |
+| Haziq Fahmi Bin Abd Aziz | 52215125155 | Reference Management, APA 7th Edition Citation Formatting, External Resource Documentation, Dataset Reference Management, and Repository References Organisation (`07_References`) |
 
 ---
 
